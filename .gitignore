@@ -19,3 +19,34 @@ config.secret.js.env
 .env*.local
 .env
 .env
+
+
+# Crear .gitignore inmediatamente al iniciar un proyecto
+cat > .gitignore << 'EOF'
+# Environment variables
+.env
+.env*.local
+.env.local
+.env.development
+.env.test
+.env.production
+
+# API Keys
+*.key
+*.pem
+*.p8
+
+# Dependencies
+node_modules/
+vendor/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+EOF
